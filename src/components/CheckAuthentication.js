@@ -1,15 +1,16 @@
-import {useEffect, useState} from "react";
+import React from "react";
+import { useEffect, useState } from "react";
 
 export default function CheckAuthentication(props) {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-    useEffect(() => {
-        if (localStorage.getItem("user")) {
-            setIsAuthenticated(true);
-        } else {
-            setIsAuthenticated(false)
-        }
-    }, []);
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+    }
+  }, []);
 
-    return isAuthenticated ? props.children : <h1>User is not logged</h1>
+  return isAuthenticated ? props.children : <h1>User is not logged</h1>;
 }

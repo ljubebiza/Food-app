@@ -1,7 +1,9 @@
+import React from "react";
+
 export default function Footer() {
-    return (
-        <div className="footer">
-            <p>Powered by ReactClass</p>
-        </div>
-    );
+  return (
+    <div className="footer">
+      <p>Powered by ReactClass</p>
+    </div>
+  );
 }
