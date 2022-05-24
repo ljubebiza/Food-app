@@ -1,0 +1,154 @@
+body {
+    background-color: #F6D192;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+span {
+    font-family: sans-serif;
+}
+button {
+    cursor: pointer;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 500px;
+    border-radius: 10px;
+    padding: 25px;
+}
+.text-center {
+    text-align: center;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.padding-20 {
+    padding: 20px;
+}
+.header {
+    background: #C04B4B;
+    padding: 10px;
+    color: #F6A992;
+}
+.header .logo span {
+    font-weight: bold;
+    position: relative;
+    bottom: 6px;
+    left: 15px;
+    font-size: 23px;
+}
+.logout {
+    float: right;
+    position: relative;
+    bottom: 32px;
+}
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #C04B4B;
+    font-weight: bold;
+}
+.login-wrapper {
+    width: 400px;
+    height: 350px;
+    margin: 200px auto 0;
+    background: #F6A992;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px -3px #000;
+    text-align: center;
+    padding: 10px 10px 0 0
+}
+.login-wrapper form {
+    padding: 10px;
+}
+.button {
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    color: #C04B4B;
+    width: 70px;
+    background: #F6E592;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.login-wrapper .button {
+    float: right;
+}
+input {
+    border: none;
+    height: 40px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.login-wrapper h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #C04B4B;
+}
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255, 0.6);
+    text-align: center;
+    z-index: 9;
+}
+.overlay .popup {
+    width: 300px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    margin-top: 12%;
+}
+.company {
+    width: 20%;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 3px lightgrey;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.sidebar {
+    float: left;
+    width: 300px;
+    background: #C04B4B;
+    height: 100vh;
+    color: white;
+}
+.sidebar ul {
+    list-style: none;
+}
+.sidebar ul li {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.sidebar ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.create-company {
+    text-align: center;
+    margin: 0 auto;
+    float: left;
+    padding: 100px;
+}
