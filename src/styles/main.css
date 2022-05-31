@@ -1,5 +1,5 @@
 body {
-    background-color: #F6D192;
+  background-color: #f6d192;
 }
 h1,
 h2,
@@ -11,144 +11,244 @@ p,
 a,
 li,
 span {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: #fff;
-    min-height: 500px;
-    border-radius: 10px;
-    padding: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  height: 500px;
+  border-radius: 10px;
+  padding-left: 10%;
+  padding-top: 15px;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 .cursor-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 .padding-20 {
-    padding: 20px;
+  padding: 20px;
 }
 .header {
-    background: #C04B4B;
-    padding: 10px;
-    color: #F6A992;
+  background: #c04b4b;
+  padding: 10px;
+  color: #f6a992;
 }
 .header .logo span {
-    font-weight: bold;
-    position: relative;
-    bottom: 6px;
-    left: 15px;
-    font-size: 23px;
+  font-weight: bold;
+  position: relative;
+  bottom: 6px;
+  left: 15px;
+  font-size: 23px;
 }
 .logout {
-    float: right;
-    position: relative;
-    bottom: 32px;
+  float: right;
+  position: relative;
+  bottom: 32px;
 }
 .footer {
-    position: fixed;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    text-align: center;
-    color: #C04B4B;
-    font-weight: bold;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  color: #c04b4b;
+  font-weight: bold;
 }
 .login-wrapper {
-    width: 400px;
-    height: 350px;
-    margin: 200px auto 0;
-    background: #F6A992;
-    border-radius: 10px;
-    box-shadow: 1px 1px 8px -3px #000;
-    text-align: center;
-    padding: 10px 10px 0 0
+  width: 400px;
+  height: 350px;
+  margin: 200px auto 0;
+  background: #f6a992;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px -3px #000;
+  text-align: center;
+  padding: 10px 10px 0 0;
 }
 .login-wrapper form {
-    padding: 10px;
+  padding: 10px;
 }
 .button {
-    font-size: 17px;
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
-    color: #C04B4B;
-    width: 70px;
-    background: #F6E592;
-    font-weight: bold;
-    margin-right: 10px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  color: #c04b4b;
+  width: 70px;
+  background: #f6e592;
+  font-weight: bold;
+  margin-right: 10px;
 }
 .login-wrapper .button {
-    float: right;
+  float: right;
 }
 input {
-    border: none;
-    height: 40px;
-    padding: 5px;
-    width: 100%;
-    margin-bottom: 10px;
+  border: none;
+  height: 40px;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+textarea {
+  border: none;
+  height: 80px;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 .login-wrapper h4 {
-    font-size: 22px;
-    font-weight: bold;
-    color: #C04B4B;
+  font-size: 22px;
+  font-weight: bold;
+  color: #c04b4b;
 }
 .overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(255,255,255, 0.6);
-    text-align: center;
-    z-index: 9;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  z-index: 9;
 }
 .overlay .popup {
-    width: 300px;
-    margin: 0 auto;
-    background: white;
-    padding: 30px;
-    margin-top: 12%;
+  width: 300px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  margin-top: 12%;
 }
 .company {
-    width: 20%;
-    height: 60px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px 3px lightgrey;
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    font-size: 20px;
-    text-align: center;
+  width: 27%;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 3px lightgrey;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+  background: white;
+}
+.company img {
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  height: 8em;
+  left: 0;
+  top: 0;
 }
 .sidebar {
-    float: left;
-    width: 300px;
-    background: #C04B4B;
-    height: 100vh;
-    color: white;
+  float: left;
+  width: 300px;
+  background: #c04b4b;
+  height: 100vh;
+  color: white;
 }
 .sidebar ul {
-    list-style: none;
+  list-style: none;
 }
 .sidebar ul li {
-    font-size: 18px;
-    margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 .sidebar ul li:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .create-company {
-    text-align: center;
-    margin: 0 auto;
-    float: left;
-    padding: 100px;
+  margin: 0 auto;
+  float: left;
+  padding: 5em;
+  width: 47em;
+  text-align: center;
+}
+.items-container {
+  margin: 0 auto;
+
+  padding: 5em;
+  background: white;
+  max-width: 47em;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tools-container {
+  justify-content: space-between;
+  display: flex;
+  color: blanchedalmond;
+  width: 2.3em;
+  margin-right: 0.2em;
+  float: right;
+}
+.description {
+  margin-top: 10px;
+  overflow: hidden;
+  display: grid;
+  padding-left: 7px;
+  padding-top: 3px;
+  font-size: 15px;
+  color: gray;
+}
+.description span {
+  text-align: left;
+}
+.price {
+  font-weight: bold;
+}
+
+.item-title {
+  margin-top: -1.6em;
+  font-weight: bold;
+}
+.item-title span {
+  background-color: #fff;
+  border-radius: 2px;
+  border-radius: 4px;
+}
+
+.quantity {
+  display: flex;
+  margin: 0 auto;
+}
+.quantity div {
+  height: 15px;
+  width: 5%;
+  margin-bottom: 10px;
+}
+.quantity button {
+  background: transparent;
+  border: solid gray 1px;
+  height: 17px;
+  border-radius: 7px;
+  width: 19px;
+}
+.action-button {
+  border-radius: 11px;
+  width: 52%;
+  background: transparent;
+  margin-bottom: 2%;
+  border: solid 1px;
+}
+.action-button:hover {
+  background-color: #f6d192;
+}
+.quantity div {
+  margin-left: 3%;
+  margin-right: 17%;
 }

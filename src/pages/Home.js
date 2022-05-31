@@ -3,12 +3,9 @@ import { React, useEffect, useState } from "react";
 
 import {
   collection,
-  addDoc,
   updateDoc,
-  doc,
   Timestamp,
   query,
-  orderBy,
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "../services/firebase";
@@ -28,12 +25,13 @@ export default function Home() {
 
   const getCompanies = async () => {
     try {
-      const q = query(collection(db, "companies"), orderBy("id", "desc"));
+      const q = query(collection(db, "companies"));
       onSnapshot(q, (querySnapshot) => {
         setCompanies(
           querySnapshot.docs.map((doc) => ({
             id: doc.id,
             name: doc.data().name,
+            image: doc.data().image,
           }))
         );
       });
@@ -51,7 +49,14 @@ export default function Home() {
       <Layout>
         <div className="container">
           {companies.map((company, index) => {
-            return <Company id={company.id} key={index} name={company.name} />;
+            return (
+              <Company
+                id={company.id}
+                key={index}
+                name={company.name}
+                image={company.image}
+              />
+            );
           })}
         </div>
       </Layout>

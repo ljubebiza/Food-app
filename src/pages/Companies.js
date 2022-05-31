@@ -1,33 +1,24 @@
 import { React, useEffect, useState } from "react";
-
-import {
-  collection,
-  addDoc,
-  updateDoc,
-  doc,
-  Timestamp,
-  query,
-  orderBy,
-  onSnapshot,
-} from "firebase/firestore";
+import { collection, query, onSnapshot } from "firebase/firestore";
 import { db } from "../services/firebase";
 
 import CheckAuthentication from "../components/CheckAuthentication";
 import Layout from "../components/Layout";
 import Sidebar from "../components/Sidebar";
-import CompanyAdmin from "../components/Company";
+import NavigateToCompanyAdmin from "../components/NavigateToCompanyAdmin";
 
 export default function Companies() {
   const [companies, setCompanies] = useState([]);
 
   const getCompanies = async () => {
     try {
-      const q = query(collection(db, "companies"), orderBy("id", "desc"));
+      const q = query(collection(db, "companies"));
       onSnapshot(q, (querySnapshot) => {
         setCompanies(
           querySnapshot.docs.map((doc) => ({
             id: doc.id,
             name: doc.data().name,
+            image: doc.data().image,
           }))
         );
       });
@@ -44,10 +35,15 @@ export default function Companies() {
     <CheckAuthentication>
       <Layout title="Admin Panel - companies">
         <Sidebar />
-        <div className="create-company">
+        <div className="items-container">
           {companies.map((company, index) => {
             return (
-              <CompanyAdmin id={company.id} key={index} name={company.name} />
+              <NavigateToCompanyAdmin
+                key={index}
+                id={company.id}
+                name={company.name}
+                image={company.image}
+              />
             );
           })}
         </div>

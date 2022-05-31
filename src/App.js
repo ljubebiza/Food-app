@@ -7,6 +7,7 @@ import Admin from "./pages/Admin";
 import CreateCompany from "./pages/CreateCompany";
 import CompanyView from "./pages/CompanyView";
 import CompanyAdmin from "./pages/CompanyAdmin";
+import CompanyProducts from "./components/CompanyProducts";
 import Companies from "./pages/Companies";
 import NotFound from "./pages/NotFound";
 import "./styles/main.css";
@@ -32,7 +33,12 @@ function App() {
           />
           <Route
             element={<CompanyAdmin />}
-            path="/admin/company/:id/:companyName"
+            path="/admin/companies/:id/:companyName"
+            exact
+          />
+          <Route
+            element={<CompanyProducts />}
+            path="/admin/companies/companyProducts/:id/:companyName"
             exact
           />
           <Route element={<Companies />} path="/admin/companies" exact />
