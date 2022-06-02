@@ -18,7 +18,8 @@ export default function Header(props) {
         <img src={Logo} width={30} alt="logo" />
         <span>{props.title ? props.title : "Food Delivery"}</span>
       </div>
-      <div className="logout">
+      <div className="logout tooltip">
+        <span className=" tooltiptext"> Logout</span>
         <span className="cursor-pointer" onClick={logout}>
           <img width={30} src={Logout} alt="Logout" />
         </span>

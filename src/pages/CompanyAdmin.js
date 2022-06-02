@@ -66,6 +66,7 @@ export default function CompanyAdmin() {
             "Uploading..."
           ) : (
             <a
+              className="navigation-link"
               href="#"
               onClick={() =>
                 navigate(

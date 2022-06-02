@@ -18,6 +18,7 @@ export default function CompanyProducts() {
       <Layout title={`Admin panel - ${params.companyName} items`}>
         <Sidebar />
         <a
+          className="navigation-link"
           href="#"
           onClick={() => {
             navigate(`/admin/companies/${params.id}/${params.companyName}`);
@@ -25,20 +26,22 @@ export default function CompanyProducts() {
         >
           &lt; Back to Add items
         </a>
-        <h1>Companiy products</h1>
-        <div className="items-container">
-          <ListCompanyItems
-            setItemIndex={setItemIndex}
-            setStartEditing={setStartEditing}
-            setItems={setItems}
-            items={items}
-          />
-          {startEditing && (
-            <EditItemForm
-              item={items[itemIndex]}
+        <div className="products-holder">
+          <h1>Companiy products</h1>
+          <div className="items-container">
+            <ListCompanyItems
+              setItemIndex={setItemIndex}
               setStartEditing={setStartEditing}
+              setItems={setItems}
+              items={items}
             />
-          )}
+            {startEditing && (
+              <EditItemForm
+                item={items[itemIndex]}
+                setStartEditing={setStartEditing}
+              />
+            )}
+          </div>
         </div>
       </Layout>
     </CheckAuthentication>

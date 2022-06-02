@@ -20,7 +20,13 @@ export default function Sidebar() {
         >
           Companies
         </li>
-        <li>Orders</li>
+        <li
+          onClick={() => {
+            navigate("/admin/companies/orders");
+          }}
+        >
+          Orders
+        </li>
       </ul>
     </div>
   );

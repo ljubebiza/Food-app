@@ -12,7 +12,7 @@ export default function BuyButtons(props) {
           name: props.name,
           ordered: Timestamp.now(),
           quantity: props.quantity,
-          delovered: false,
+          delevered: false,
           price: props.price,
           companyId: props.companyId,
         });

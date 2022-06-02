@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   background-color: #f6d192;
 }
 h1,
@@ -56,6 +57,7 @@ button {
   position: relative;
   bottom: 32px;
 }
+
 .footer {
   position: fixed;
   bottom: 10px;
@@ -176,11 +178,10 @@ textarea {
 }
 .items-container {
   margin: 0 auto;
-
+  box-shadow: 1px 1px 3px 1px gray;
   padding: 5em;
   background: white;
   max-width: 47em;
-
   overflow-x: hidden;
   overflow-y: auto;
   height: 300px;
@@ -251,4 +252,108 @@ textarea {
 .quantity div {
   margin-left: 3%;
   margin-right: 17%;
+}
+table {
+  background: white;
+  border-collapse: collapse;
+  text-align: justify;
+  width: 900px;
+}
+
+td,
+th {
+  text-align: center;
+  text-overflow: ellipsis;
+}
+td {
+  color: gray;
+}
+td:nth-child(5n) {
+  color: green;
+}
+tr {
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+tr:first-child {
+  border-bottom: none;
+}
+tr:last-child {
+  border-bottom: none;
+}
+td:first-child {
+  width: 20%;
+}
+.table-container {
+  background-color: white;
+  padding: 2%;
+  box-shadow: 1px 1px 5px 1px grey;
+  border-radius: 18px;
+  max-width: 900px;
+  position: relative;
+  margin: 0 auto;
+}
+.orders-container {
+  padding-left: 8%;
+  margin-top: 10%;
+}
+.orders-container h1 {
+  margin-left: 15%;
+}
+.sidebar-mini {
+  display: block;
+  width: 100%;
+  background: #c04b4b;
+  margin-top: 0;
+  color: white;
+  font-weight: bold;
+}
+.sidebar-mini span {
+  margin: 49px;
+}
+.sidebar-mini span:hover {
+  color: #f6a992;
+  cursor: pointer;
+}
+.navigation-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.navigation-link:hover {
+  color: #c04b4b;
+}
+.products-holder {
+  margin: 0 auto;
+
+  max-width: 47em;
+
+  height: 300px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  right: 10%;
+  top: 70%;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
