@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { formatDate } from "../services/formatDate";
 
 import { db } from "../services/firebase";
-import { collection, query, onSnapshot, where } from "firebase/firestore";
-import { faBookOpenReader } from "@fortawesome/free-solid-svg-icons";
+import { collection, query, onSnapshot } from "firebase/firestore";
 
 export default function ListOrders() {
   const [orders, setOrders] = useState([]);
@@ -14,11 +13,8 @@ export default function ListOrders() {
     onSnapshot(q, (querySnapShot) => {
       setOrders(
         querySnapShot.docs.map((doc) => ({
-          name: doc.data().name,
-          quantity: parseFloat(doc.data().quantity),
-          time: formatDate(doc.data().ordered.seconds * 1000),
-          delevered: doc.data().delovered,
-          price: parseFloat(doc.data().price),
+          orderId: doc.id,
+          items: doc.data().order,
         }))
       );
     });
@@ -27,30 +23,39 @@ export default function ListOrders() {
   useEffect(() => {
     getOrders();
   }, []);
-  console.log(orders);
 
+  orders.map((order, index) => {
+    order.items.map((item) => console.log(item));
+  });
   return (
     <div className="table-container">
       <table>
-        <tr>
-          <th>Name</th>
-          <th>Quantity</th>
-          <th>Price</th>
-          <th>Price sum</th>
-          <th>Status</th>
-          <th>Time of order</th>
-        </tr>
-
-        {orders.map((order, index) => (
+        <thead>
           <tr>
-            <td>{order.name}</td>
-            <td>{order.quantity} x</td>
-            <td>{order.price}$</td>
-            <td>{order.price * order.quantity} $</td>
-            <td>{order.delevered === false ? "Panding..." : "Delivered"}</td>
-            <td>{order.time}</td>
+            <th>Order code</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Price sum</th>
+            <th>Status</th>
+            <th>Time of order</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {orders.map((order, index) =>
+            order.items.map((item, index) => (
+              <tr key={index}>
+                <td>{order.orderId}</td>
+                <td>{item.name}</td>
+                <td>{item.quantity} x</td>
+                <td>{item.price}$</td>
+                <td>{item.price * item.quantity} $</td>
+                <td>{item.delevered === false ? "Panding..." : "Delivered"}</td>
+                <td>{formatDate(item.time.seconds)}</td>
+              </tr>
+            ))
+          )}
+        </tbody>
       </table>
     </div>
   );

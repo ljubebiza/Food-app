@@ -1,13 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import { React, useEffect, useState } from "react";
 
-import {
-  collection,
-  updateDoc,
-  Timestamp,
-  query,
-  onSnapshot,
-} from "firebase/firestore";
+import { collection, query, onSnapshot } from "firebase/firestore";
 import { db } from "../services/firebase";
 
 import CheckAuthentication from "../components/CheckAuthentication";
@@ -15,13 +8,7 @@ import Layout from "../components/Layout";
 import Company from "../components/Company";
 
 export default function Home() {
-  const navigate = useNavigate();
   const [companies, setCompanies] = useState([]);
-
-  const logout = () => {
-    localStorage.removeItem("user");
-    navigate("/login");
-  };
 
   const getCompanies = async () => {
     try {

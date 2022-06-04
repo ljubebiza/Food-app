@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 import { React, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -12,16 +14,10 @@ export default function CompanyView(props) {
 
   return (
     <CheckAuthentication>
-      <Layout title={`Food Delivery - ${params.companyName}`}>
-        <div className="sidebar-mini">
-          <span
-            onClick={() => {
-              navigate("/home");
-            }}
-          >
-            See all companies
-          </span>
-        </div>
+      <Layout
+        title={`Food Delivery - ${params.companyName}`}
+        shoppingChartIcon={<FontAwesomeIcon icon={faShoppingBasket} />}
+      >
         <div className="container">
           <h3>{params.companyName}</h3>
           <ListCompanyItems setItems={setItems} items={items} />

@@ -1,14 +1,13 @@
 import ItemView from "./ItemView";
 
 import { useParams } from "react-router-dom";
-import { useEffect, React } from "react";
+import { useState, useEffect, React } from "react";
 
 import { collection, query, onSnapshot, where } from "firebase/firestore";
 import { db } from "../services/firebase";
 
 export default function ListCompanyItems(props) {
   const params = useParams();
-
   const getItems = async () => {
     try {
       const itemsRef = collection(db, "items");

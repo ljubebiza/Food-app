@@ -6,6 +6,6 @@ export const formatDate = (time) => {
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
-  }).format(time);
+  }).format(time * 1000);
   return date;
 };

@@ -51,11 +51,7 @@ button {
   bottom: 6px;
   left: 15px;
   font-size: 23px;
-}
-.logout {
-  float: right;
-  position: relative;
-  bottom: 32px;
+  cursor: pointer;
 }
 
 .footer {
@@ -157,6 +153,11 @@ textarea {
   background: #c04b4b;
   height: 100vh;
   color: white;
+}
+.logout {
+  bottom: 32px;
+  position: relative;
+  float: right;
 }
 .sidebar ul {
   list-style: none;
@@ -268,16 +269,14 @@ th {
 td {
   color: gray;
 }
-td:nth-child(5n) {
+td:nth-child(6n) {
   color: green;
 }
 tr {
   width: 100%;
   border-bottom: 1px solid gray;
 }
-tr:first-child {
-  border-bottom: none;
-}
+
 tr:last-child {
   border-bottom: none;
 }
@@ -356,4 +355,95 @@ td:first-child {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+.shopping-chart-icon {
+  color: #f6d192;
+}
+.shopping-chart-icon:hover {
+  color: #fff;
+}
+.menu {
+  display: flex;
+  float: right;
+  position: relative;
+  bottom: 38px;
+  padding-top: 1%;
+  width: 8%;
+  justify-content: space-between;
+}
+.buy-chart {
+  max-width: 1000px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: grey 1px 1px 5px 1px;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 2%;
+  color: gray;
+}
+.buy-chart h4 {
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+.buy-chart h5 {
+  position: relative;
+  float: right;
+  margin-top: 0%;
+}
+.buy-chart-heading {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: relative;
+}
+.buy-chart-heading span {
+  font-weight: bold;
+  width: 12%;
+}
+.buy-chart-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: relative;
+}
+.buy-chart-content span {
+  width: 12%;
+}
+.remove-btn {
+  background-color: transparent;
+  border: gray 2px solid;
+  border-radius: 16px;
+  color: gray;
+}
+.buy-btn {
+  position: relative;
+  margin-top: 6%;
+  right: -91%;
+  padding: 1%;
+  width: 10%;
+}
+.cancel-btn {
+  position: relative;
+  left: -5%;
+  color: red;
+  border: none;
+  background-color: white;
+}
+.cancel-btn:hover {
+  color: white;
+  background-color: red;
+}
+.chart-notification {
+  border-radius: 9px;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+.chart-notification-holder {
+  margin: 0;
+  position: relative;
+  right: -58px;
+  width: 17px;
+  height: 17px;
+  border-radius: 9px;
 }

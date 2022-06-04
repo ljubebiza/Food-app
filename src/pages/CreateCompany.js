@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import { useParams } from "react-router-dom";
 
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import {
@@ -19,7 +18,6 @@ import { Alert } from "../services/Alert";
 export default function CreateCompany() {
   const companyNameRef = useRef();
   const [uploadedFile, setUploadedFile] = useState(null);
-  const params = useParams();
   const storage = getStorage();
   const [error, setError] = useState(false);
 

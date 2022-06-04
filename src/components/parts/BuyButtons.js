@@ -1,24 +1,27 @@
-import { db } from "../../services/firebase";
-import { addDoc, collection, Timestamp } from "firebase/firestore";
-
+import { Timestamp } from "firebase/firestore";
 import { Alert } from "../../services/Alert";
+import { useContext } from "react";
+import ShoppingChartContext from "../../store/shoppingChart-context";
 
 export default function BuyButtons(props) {
-  const handleBuy = (e) => {
-    e.preventDefault();
+  const ordersCtx = useContext(ShoppingChartContext);
+
+  const handleChart = (e) => {
     if (props.quantity > 0) {
-      try {
-        addDoc(collection(db, "purchases"), {
-          name: props.name,
-          ordered: Timestamp.now(),
-          quantity: props.quantity,
-          delevered: false,
-          price: props.price,
-          companyId: props.companyId,
-        });
-        Alert("top-end", "success", "Thank you for your purchase", 2000);
-      } catch (err) {
-        alert(err);
+      const orderedItem = {
+        name: props.name,
+        price: parseFloat(props.price),
+        delevered: false,
+        time: Timestamp.now(),
+        quantity: parseFloat(props.quantity),
+        id: props.id,
+      };
+      console.log(ordersCtx.orders);
+      console.log(orderedItem.quantity);
+      if (ordersCtx.isItemOrdered(orderedItem.id)) {
+        ordersCtx.setItemQuantity(props.id, orderedItem.quantity);
+      } else {
+        ordersCtx.addOrder(orderedItem);
       }
     } else {
       Alert("top-end", "warning", "You need at least one item", 3000);
@@ -45,8 +48,8 @@ export default function BuyButtons(props) {
         </button>
       </div>
       <div>
-        <button className="action-button" onClick={handleBuy}>
-          Buy
+        <button className="action-button" onClick={handleChart}>
+          Add to chart +
         </button>
       </div>
     </>

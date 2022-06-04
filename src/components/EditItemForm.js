@@ -70,7 +70,7 @@ export default function EditItemForm(props) {
           placeholder="Item description"
           required
         />
-        <img width={60} src={image}></img>
+        <img width={60} src={image} alt="itemPic"></img>
         <UploadFile
           uploadedFile={uploadedFile}
           setUploadedFile={setUploadedFile}

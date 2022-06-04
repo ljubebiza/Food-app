@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import Sidebar from "../components/Sidebar";
 import ListOrders from "../components/ListOrders";
-export default function () {
+export default function Orders() {
   return (
     <Layout title={"Admin panel - Orders"}>
       <Sidebar />

@@ -11,7 +11,8 @@ import CompanyProducts from "./components/CompanyProducts";
 import Companies from "./pages/Companies";
 import NotFound from "./pages/NotFound";
 import "./styles/main.css";
-import Orders from "./pages/Orders";
+import OrdersAdmin from "./pages/OrdersAdmin";
+import BuyChart from "./components/BuyChart";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route element={<Login />} path="/login" exact />
           <Route element={<Home />} path="/home" exact />
           <Route element={<Admin />} path="/admin" exact />
+          <Route element={<BuyChart />} path="/home/buyChart" exact />
           <Route
             element={<CreateCompany />}
             path="/admin/company/create"
@@ -32,7 +34,11 @@ function App() {
             path="/company/:id/:companyName"
             exact
           />
-          <Route element={<Orders />} path="/admin/companies/orders" exact />
+          <Route
+            element={<OrdersAdmin />}
+            path="/admin/companies/orders"
+            exact
+          />
           <Route
             element={<CompanyAdmin />}
             path="/admin/companies/:id/:companyName"
