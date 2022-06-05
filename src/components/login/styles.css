@@ -1,0 +1,54 @@
+/* Login */
+.login-wrapper {
+  width: 400px;
+  height: 350px;
+  margin: 200px auto 0;
+  background: #f6a992;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px -3px #000;
+  text-align: center;
+  padding: 10px 10px 0 0;
+}
+.login-wrapper form {
+  padding: 10px;
+}
+.login-wrapper .button {
+  float: right;
+}
+input {
+  border: none;
+  height: 40px;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+textarea {
+  border: none;
+  height: 80px;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.login-wrapper h4 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c04b4b;
+}
+/* Overlay */
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  z-index: 9;
+}
+.overlay .popup {
+  width: 300px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  margin-top: 12%;
+}

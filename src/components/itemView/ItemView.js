@@ -1,8 +1,11 @@
-import BuyButtons from "./parts/BuyButtons";
-import DeleteButton from "./parts/DeleteButton";
-import EditButton from "./parts/EditButton";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+import "./styles.css";
+
+import BuyButtons from "../parts/BuyButtons";
+import DeleteButton from "../parts/DeleteButton";
+import EditButton from "../parts/EditButton";
 
 export default function ItemView(props) {
   const [quantity, setQuantity] = useState(0);

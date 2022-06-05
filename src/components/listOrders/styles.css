@@ -1,0 +1,46 @@
+/* Orders */
+table {
+  background: white;
+  border-collapse: collapse;
+  text-align: justify;
+  width: 900px;
+}
+
+td,
+th {
+  text-align: center;
+  text-overflow: ellipsis;
+}
+td {
+  color: gray;
+}
+td:nth-child(6n) {
+  color: green;
+}
+tr {
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+td:first-child {
+  width: 20%;
+}
+.table-container {
+  background-color: white;
+  padding: 2%;
+  box-shadow: 1px 1px 5px 1px grey;
+  border-radius: 18px;
+  max-width: 900px;
+  position: relative;
+  margin: 0 auto;
+}
+.orders-container {
+  padding-left: 8%;
+  margin-top: 10%;
+}
+.orders-container h1 {
+  margin-left: 15%;
+}

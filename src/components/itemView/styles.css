@@ -1,0 +1,65 @@
+/* ItemmViev */
+.tools-container {
+  justify-content: space-between;
+  display: flex;
+  color: blanchedalmond;
+  width: 2.3em;
+  margin-right: 0.2em;
+  float: right;
+}
+.description {
+  margin-top: 10px;
+  overflow: hidden;
+  display: grid;
+  padding-left: 7px;
+  padding-top: 3px;
+  font-size: 15px;
+  color: gray;
+}
+.description span {
+  text-align: left;
+}
+.price {
+  font-weight: bold;
+}
+
+.item-title {
+  margin-top: -1.6em;
+  font-weight: bold;
+}
+.item-title span {
+  background-color: #fff;
+  border-radius: 2px;
+  border-radius: 4px;
+}
+
+.quantity {
+  display: flex;
+  margin: 0 auto;
+}
+.quantity div {
+  height: 15px;
+  width: 5%;
+  margin-bottom: 10px;
+}
+.quantity button {
+  background: transparent;
+  border: solid gray 1px;
+  height: 17px;
+  border-radius: 7px;
+  width: 19px;
+}
+.action-button {
+  border-radius: 11px;
+  width: 52%;
+  background: transparent;
+  margin-bottom: 2%;
+  border: solid 1px;
+}
+.action-button:hover {
+  background-color: #f6d192;
+}
+.quantity div {
+  margin-left: 3%;
+  margin-right: 17%;
+}

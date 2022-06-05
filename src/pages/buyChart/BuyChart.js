@@ -1,12 +1,14 @@
 import { useContext, useState } from "react";
 
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../services/firebase";
+import { db } from "../../services/firebase";
 
-import { Alert } from "../services/Alert";
-import ShoppingChartContext from "../store/shoppingChart-context";
-import Layout from "./Layout";
-import CheckAuthentication from "./CheckAuthentication";
+import { Alert } from "../../services/Alert";
+import ShoppingChartContext from "../../store/shoppingChart-context";
+import Layout from "../../components/Layout";
+import CheckAuthentication from "../../components/CheckAuthentication";
+
+import "./styles.css";
 
 export default function BuyChart() {
   const ordersCtx = useContext(ShoppingChartContext);
@@ -62,7 +64,7 @@ export default function BuyChart() {
                 Buy
               </button>
               <button
-                className="button cancel-btn"
+                className=" cancel-btn"
                 onClick={() => {
                   ordersCtx.deleteAll();
                 }}

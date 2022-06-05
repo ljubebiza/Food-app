@@ -1,0 +1,65 @@
+/* header */
+.header {
+  background: #c04b4b;
+  padding: 10px;
+  color: #f6a992;
+}
+.header .logo span {
+  font-weight: bold;
+  position: relative;
+  bottom: 6px;
+  left: 15px;
+  font-size: 23px;
+  cursor: pointer;
+}
+/* Header */
+.logout {
+  bottom: 32px;
+  position: relative;
+  float: right;
+}
+
+/* Header */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  right: 10%;
+  top: 70%;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* Header */
+.shopping-chart-icon {
+  color: #f6d192;
+}
+.shopping-chart-icon:hover {
+  color: #fff;
+}
+.menu {
+  display: flex;
+  float: right;
+  position: relative;
+  bottom: 38px;
+  padding-top: 1%;
+  width: 8%;
+  justify-content: space-between;
+}

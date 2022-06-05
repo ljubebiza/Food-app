@@ -1,14 +1,12 @@
 import Layout from "../components/Layout";
-import Sidebar from "../components/Sidebar";
-import ListOrders from "../components/ListOrders";
+import Sidebar from "../components/siderbar/Sidebar";
+import ListOrders from "../components/listOrders/ListOrders";
 export default function Orders() {
   return (
     <Layout title={"Admin panel - Orders"}>
       <Sidebar />
-      <div className="orders-container">
-        <h1>Orders</h1>
-        <ListOrders />
-      </div>
+
+      <ListOrders />
     </Layout>
   );
 }

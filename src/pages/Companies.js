@@ -4,7 +4,7 @@ import { db } from "../services/firebase";
 
 import CheckAuthentication from "../components/CheckAuthentication";
 import Layout from "../components/Layout";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/siderbar/Sidebar";
 import NavigateToCompanyAdmin from "../components/NavigateToCompanyAdmin";
 
 export default function Companies() {

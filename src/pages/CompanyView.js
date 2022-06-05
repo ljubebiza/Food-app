@@ -14,10 +14,7 @@ export default function CompanyView(props) {
 
   return (
     <CheckAuthentication>
-      <Layout
-        title={`Food Delivery - ${params.companyName}`}
-        shoppingChartIcon={<FontAwesomeIcon icon={faShoppingBasket} />}
-      >
+      <Layout title={`Food Delivery - ${params.companyName}`}>
         <div className="container">
           <h3>{params.companyName}</h3>
           <ListCompanyItems setItems={setItems} items={items} />

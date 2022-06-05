@@ -2,12 +2,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Logo from "../images/logo.png";
+import Logo from "../../images/logo.png";
+import "./styles.css";
 
-import { allowedUsers } from "../helpers/AllowedUsers";
+import { allowedUsers } from "../../helpers/AllowedUsers";
 
-import Footer from "../components/Footer.js";
-import Popup from "../components/Popup.js";
+import Footer from "../footer/Footer.js";
+import Popup from "../Popup.js";
 import Swal from "sweetalert2";
 
 export default function Login() {

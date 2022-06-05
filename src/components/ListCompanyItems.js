@@ -1,7 +1,7 @@
-import ItemView from "./ItemView";
+import ItemView from "./itemView/ItemView";
 
 import { useParams } from "react-router-dom";
-import { useState, useEffect, React } from "react";
+import { useEffect, React } from "react";
 
 import { collection, query, onSnapshot, where } from "firebase/firestore";
 import { db } from "../services/firebase";

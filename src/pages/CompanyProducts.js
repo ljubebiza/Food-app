@@ -1,8 +1,8 @@
 import CheckAuthentication from "../components/CheckAuthentication";
 import Layout from "../components/Layout";
-import Sidebar from "../components/Sidebar";
-import EditItemForm from "./EditItemForm";
-import ListCompanyItems from "./ListCompanyItems";
+import Sidebar from "../components/siderbar/Sidebar";
+import EditItemForm from "../components/EditItemForm";
+import ListCompanyItems from "../components/ListCompanyItems";
 import { useParams, useNavigate } from "react-router-dom";
 import { React, useState } from "react";
 
@@ -29,6 +29,7 @@ export default function CompanyProducts() {
         <div className="products-holder">
           <h1>Companiy products</h1>
           <div className="items-container">
+            {items.length < 1 && <h2>No items to show</h2>}
             <ListCompanyItems
               setItemIndex={setItemIndex}
               setStartEditing={setStartEditing}

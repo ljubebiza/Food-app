@@ -1,0 +1,81 @@
+/* Buy chart */
+.buy-chart {
+  max-width: 1000px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: grey 1px 1px 5px 1px;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 2%;
+  color: gray;
+}
+.buy-chart h4 {
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+.buy-chart h5 {
+  position: relative;
+  float: right;
+  margin-top: 0%;
+}
+.buy-chart-heading {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: relative;
+}
+.buy-chart-heading span {
+  font-weight: bold;
+  width: 12%;
+}
+.buy-chart-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: relative;
+}
+.buy-chart-content span {
+  width: 12%;
+}
+.remove-btn {
+  background-color: transparent;
+  border: gray 2px solid;
+  border-radius: 16px;
+  color: gray;
+}
+.buy-btn {
+  position: relative;
+  margin-top: 6%;
+  right: -91%;
+  padding: 1%;
+  width: 10%;
+}
+.cancel-btn {
+  position: relative;
+  left: -5%;
+  color: red;
+  border: none;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 5px;
+  background-color: white;
+}
+.cancel-btn:hover {
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+}
+.chart-notification {
+  border-radius: 9px;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+.chart-notification-holder {
+  margin: 0;
+  position: relative;
+  right: -58px;
+  width: 17px;
+  height: 17px;
+  border-radius: 9px;
+}

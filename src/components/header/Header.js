@@ -2,10 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { React, useContext } from "react";
 import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ShoppingChartContext from "../store/shoppingChart-context";
+import ShoppingChartContext from "../../store/shoppingChart-context";
 
-import Logo from "../images/logo.png";
-import Logout from "../images/logout.png";
+import Logo from "../../images/logo.png";
+import Logout from "../../images/logout.png";
+import "./styles.css";
 
 export default function Header(props) {
   const navigate = useNavigate();

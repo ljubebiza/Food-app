@@ -1,3 +1,4 @@
+/* main */
 body {
   margin: 0;
   background-color: #f6d192;
@@ -40,43 +41,7 @@ button {
 .padding-20 {
   padding: 20px;
 }
-.header {
-  background: #c04b4b;
-  padding: 10px;
-  color: #f6a992;
-}
-.header .logo span {
-  font-weight: bold;
-  position: relative;
-  bottom: 6px;
-  left: 15px;
-  font-size: 23px;
-  cursor: pointer;
-}
 
-.footer {
-  position: fixed;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  color: #c04b4b;
-  font-weight: bold;
-}
-.login-wrapper {
-  width: 400px;
-  height: 350px;
-  margin: 200px auto 0;
-  background: #f6a992;
-  border-radius: 10px;
-  box-shadow: 1px 1px 8px -3px #000;
-  text-align: center;
-  padding: 10px 10px 0 0;
-}
-.login-wrapper form {
-  padding: 10px;
-}
 .button {
   font-size: 17px;
   border: none;
@@ -88,45 +53,8 @@ button {
   font-weight: bold;
   margin-right: 10px;
 }
-.login-wrapper .button {
-  float: right;
-}
-input {
-  border: none;
-  height: 40px;
-  padding: 5px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-textarea {
-  border: none;
-  height: 80px;
-  padding: 5px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.login-wrapper h4 {
-  font-size: 22px;
-  font-weight: bold;
-  color: #c04b4b;
-}
-.overlay {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6);
-  text-align: center;
-  z-index: 9;
-}
-.overlay .popup {
-  width: 300px;
-  margin: 0 auto;
-  background: white;
-  padding: 30px;
-  margin-top: 12%;
-}
+
+/* ItemViev, NavigateToCompanyAdmin */
 .company {
   width: 27%;
   overflow: hidden;
@@ -147,36 +75,8 @@ textarea {
   left: 0;
   top: 0;
 }
-.sidebar {
-  float: left;
-  width: 300px;
-  background: #c04b4b;
-  height: 100vh;
-  color: white;
-}
-.logout {
-  bottom: 32px;
-  position: relative;
-  float: right;
-}
-.sidebar ul {
-  list-style: none;
-}
-.sidebar ul li {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.sidebar ul li:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.create-company {
-  margin: 0 auto;
-  float: left;
-  padding: 5em;
-  width: 47em;
-  text-align: center;
-}
+
+/* Companies, items, products */
 .items-container {
   margin: 0 auto;
   box-shadow: 1px 1px 3px 1px gray;
@@ -190,130 +90,7 @@ textarea {
   flex-wrap: wrap;
 }
 
-.tools-container {
-  justify-content: space-between;
-  display: flex;
-  color: blanchedalmond;
-  width: 2.3em;
-  margin-right: 0.2em;
-  float: right;
-}
-.description {
-  margin-top: 10px;
-  overflow: hidden;
-  display: grid;
-  padding-left: 7px;
-  padding-top: 3px;
-  font-size: 15px;
-  color: gray;
-}
-.description span {
-  text-align: left;
-}
-.price {
-  font-weight: bold;
-}
-
-.item-title {
-  margin-top: -1.6em;
-  font-weight: bold;
-}
-.item-title span {
-  background-color: #fff;
-  border-radius: 2px;
-  border-radius: 4px;
-}
-
-.quantity {
-  display: flex;
-  margin: 0 auto;
-}
-.quantity div {
-  height: 15px;
-  width: 5%;
-  margin-bottom: 10px;
-}
-.quantity button {
-  background: transparent;
-  border: solid gray 1px;
-  height: 17px;
-  border-radius: 7px;
-  width: 19px;
-}
-.action-button {
-  border-radius: 11px;
-  width: 52%;
-  background: transparent;
-  margin-bottom: 2%;
-  border: solid 1px;
-}
-.action-button:hover {
-  background-color: #f6d192;
-}
-.quantity div {
-  margin-left: 3%;
-  margin-right: 17%;
-}
-table {
-  background: white;
-  border-collapse: collapse;
-  text-align: justify;
-  width: 900px;
-}
-
-td,
-th {
-  text-align: center;
-  text-overflow: ellipsis;
-}
-td {
-  color: gray;
-}
-td:nth-child(6n) {
-  color: green;
-}
-tr {
-  width: 100%;
-  border-bottom: 1px solid gray;
-}
-
-tr:last-child {
-  border-bottom: none;
-}
-td:first-child {
-  width: 20%;
-}
-.table-container {
-  background-color: white;
-  padding: 2%;
-  box-shadow: 1px 1px 5px 1px grey;
-  border-radius: 18px;
-  max-width: 900px;
-  position: relative;
-  margin: 0 auto;
-}
-.orders-container {
-  padding-left: 8%;
-  margin-top: 10%;
-}
-.orders-container h1 {
-  margin-left: 15%;
-}
-.sidebar-mini {
-  display: block;
-  width: 100%;
-  background: #c04b4b;
-  margin-top: 0;
-  color: white;
-  font-weight: bold;
-}
-.sidebar-mini span {
-  margin: 49px;
-}
-.sidebar-mini span:hover {
-  color: #f6a992;
-  cursor: pointer;
-}
+/* AdminCompany, adminProducts */
 .navigation-link {
   text-decoration: none;
   color: white;
@@ -322,128 +99,12 @@ td:first-child {
 .navigation-link:hover {
   color: #c04b4b;
 }
+
+/* CompanyProducts? */
 .products-holder {
   margin: 0 auto;
 
   max-width: 47em;
 
   height: 300px;
-}
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-.tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  right: 10%;
-  top: 70%;
-
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-.shopping-chart-icon {
-  color: #f6d192;
-}
-.shopping-chart-icon:hover {
-  color: #fff;
-}
-.menu {
-  display: flex;
-  float: right;
-  position: relative;
-  bottom: 38px;
-  padding-top: 1%;
-  width: 8%;
-  justify-content: space-between;
-}
-.buy-chart {
-  max-width: 1000px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: grey 1px 1px 5px 1px;
-  margin: 0 auto;
-  margin-top: 2%;
-  padding: 2%;
-  color: gray;
-}
-.buy-chart h4 {
-  margin-top: 1%;
-  margin-bottom: 5%;
-}
-.buy-chart h5 {
-  position: relative;
-  float: right;
-  margin-top: 0%;
-}
-.buy-chart-heading {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  position: relative;
-}
-.buy-chart-heading span {
-  font-weight: bold;
-  width: 12%;
-}
-.buy-chart-content {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  position: relative;
-}
-.buy-chart-content span {
-  width: 12%;
-}
-.remove-btn {
-  background-color: transparent;
-  border: gray 2px solid;
-  border-radius: 16px;
-  color: gray;
-}
-.buy-btn {
-  position: relative;
-  margin-top: 6%;
-  right: -91%;
-  padding: 1%;
-  width: 10%;
-}
-.cancel-btn {
-  position: relative;
-  left: -5%;
-  color: red;
-  border: none;
-  background-color: white;
-}
-.cancel-btn:hover {
-  color: white;
-  background-color: red;
-}
-.chart-notification {
-  border-radius: 9px;
-  background-color: red;
-  color: white;
-  text-align: center;
-}
-.chart-notification-holder {
-  margin: 0;
-  position: relative;
-  right: -58px;
-  width: 17px;
-  height: 17px;
-  border-radius: 9px;
 }

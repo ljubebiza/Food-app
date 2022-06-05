@@ -7,23 +7,25 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from "firebase/storage";
-import { db } from "../services/firebase";
+import "./styles.css";
+import { db } from "../../services/firebase";
 
-import CheckAuthentication from "../components/CheckAuthentication";
-import Layout from "../components/Layout";
-import Sidebar from "../components/Sidebar";
-import UploadFile from "../components/UploadFile";
-import { Alert } from "../services/Alert";
+import CheckAuthentication from "../../components/CheckAuthentication";
+import Layout from "../../components/Layout";
+import Sidebar from "../../components/siderbar/Sidebar";
+import UploadFile from "../../components/UploadFile";
+import { Alert } from "../../services/Alert";
 
 export default function CreateCompany() {
   const companyNameRef = useRef();
   const [uploadedFile, setUploadedFile] = useState(null);
   const storage = getStorage();
   const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const createCompany = (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     if (uploadedFile !== null) {
       const imagePath = `${companyNameRef.current.value}/${uploadedFile.name}`;
       const storageRef = ref(storage, imagePath);
@@ -38,9 +40,11 @@ export default function CreateCompany() {
           } catch (err) {
             alert(err);
           }
+          setIsLoading(false);
         });
       });
       Alert("top-end", "success", "Company created successfully", 2000);
+
       setError(false);
     } else {
       setError(true);
@@ -50,9 +54,10 @@ export default function CreateCompany() {
   return (
     <CheckAuthentication>
       <Layout title="Admin Panel - company create">
-        <Sidebar />
+        {isLoading ? "Loading..." : <Sidebar />}
+
         <div className="create-company">
-          <form onSubmit={createCompany}>
+          <form>
             <input
               required
               ref={companyNameRef}
@@ -64,7 +69,9 @@ export default function CreateCompany() {
               setUploadedFile={setUploadedFile}
             />
             {error && <div>Picture reqired</div>}
-            <button className="button">Create</button>
+            <button className="button" onClick={createCompany}>
+              Create
+            </button>
           </form>
         </div>
       </Layout>

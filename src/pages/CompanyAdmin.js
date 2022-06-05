@@ -1,6 +1,6 @@
 import CheckAuthentication from "../components/CheckAuthentication";
 import Layout from "../components/Layout";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/siderbar/Sidebar";
 import ItemForm from "../components/ItemForm";
 import { Alert } from "../services/Alert";
 
@@ -60,22 +60,24 @@ export default function CompanyAdmin() {
   return (
     <CheckAuthentication>
       <Layout title={`Admin panel - ${params.companyName}`}>
-        <Sidebar />
         <div>
           {isLoading ? (
             "Uploading..."
           ) : (
-            <a
-              className="navigation-link"
-              href="#"
-              onClick={() =>
-                navigate(
-                  `/admin/companies/companyProducts/${params.id}/${params.companyName}`
-                )
-              }
-            >
-              See items &gt;
-            </a>
+            <>
+              <Sidebar />
+              <a
+                className="navigation-link"
+                href="#"
+                onClick={() =>
+                  navigate(
+                    `/admin/companies/companyProducts/${params.id}/${params.companyName}`
+                  )
+                }
+              >
+                See items &gt;
+              </a>
+            </>
           )}
         </div>
         <div className="create-company">
